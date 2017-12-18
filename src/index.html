@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NewApp</title>
+  <base href="/">
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDEOAyMjL7SRJcpKfXYx6XKTmaiPuolKqk",
+      authDomain: "myangualr5project.firebaseapp.com",
+      databaseURL: "https://myangualr5project.firebaseio.com",
+      projectId: "myangualr5project",
+      storageBucket: "myangualr5project.appspot.com",
+      messagingSenderId: "246545308598"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest"  href="./manifest.json">
+  <meta name="mobile-web-app-capable" content ="yes">
+  <meta name = "theme-color" content="brown">
+</head>
+<body>
+  <app-root></app-root>
+  <div class="splash" id="content">
+    <img src="/favicon.ico" width="256px" alt="random">
+    <h1>Awesome...</h1>
+  </div>
+</body>
+</html>
