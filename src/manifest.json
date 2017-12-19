@@ -3,13 +3,13 @@
     "name":"angular five",
     "start_url":"/",
     "theme_color":"brown",
-    "background_color":"white",
+    "background_color":"yellow",
     "display": "standalone",
     "orientation":"potrait",
 
     "icon":[
         {
-            "src":"/favicon.ico",
+            "src":"/assets/superman.png",
             "sizes":"512x512",
             "type":"image/png"
         }

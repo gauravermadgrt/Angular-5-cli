@@ -17,12 +17,12 @@ export type Action = Users.All;
 export class AppEffects {
     // Listen for the 'LOGIN' action
     @Effect({dispatch: false}) login$: Observable<Action> = this.actions$.ofType(Users.GET_USERS)
-    .do((action) =>{
+    .do((action: any) =>{
 
-        this.userService.getUserData().subscribe((data)=>{
+        this.userService.getUserData(action.payload).subscribe((data)=>{
 
             console.log(data);
-            this.store.dispatch(new Users.GetUsersSuccess(data.data));
+            this.store.dispatch(new Users.GetUsersSuccess(data));
         },(error)=>{
 
             console.log(error);

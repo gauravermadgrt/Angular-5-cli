@@ -8,22 +8,34 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  city: any;
+  category: any;
+  resturants: any;
   title = 'app';
     users: any = [];
   constructor(private store: Store<any>){
 
   }
 
-  ngOnInit(){
+  ngOnInit(){ 
 
     this.store.select('counter').subscribe((data)=>{
 
-        console.log(data);
-        
+        console.log(data,'sdds');
         if(data.users)
-        this.users = data.users;
+        {
+          this.category = data.users.category;
+          this.city = data.users.city;
+        }
+        
+        
+        // if(data.users)
+        // this.users = data.users;
     })
-
-    this.store.dispatch(new action.GetUsers());
+let payload = {};
+this.store.dispatch({
+  type: action.GET_USERS,payload
+});
+    
   }
 }

@@ -14,11 +14,12 @@ export class UserService {
 
     }
 
-    getUserData() {
+    getUserData(data) {
+        console.log(data);
         this.authRequired = false;
         this.utcOffset = false;
         let url = environment.APP.API_URL + environment.APP.APP_GET_USER;
-        return this.apiService.getApi(url, this.authRequired, this.utcOffset);
+        return this.apiService.postApi(url,data,this.authRequired, this.utcOffset);
     }
 
 }

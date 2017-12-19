@@ -6,8 +6,8 @@
 export const environment = {
     production: false,
     APP :{
-          API_URL: 'http://35.154.55.53:3002',
-          'APP_GET_USER': '/api/users/getUsers'
+        API_URL: 'https://dodo.jugnoo.in:8024',
+        'APP_GET_USER': '/web/get_sign_up_info'
       }
   
   };

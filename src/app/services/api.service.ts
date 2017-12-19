@@ -19,7 +19,7 @@ export class ApiService {
 
     getToken(authRequired, utcOffset) {
 
-        this.headers = new Headers({ 'Content-Type': 'application/json', 'content-language': 'en' });
+        this.headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'});
         this.token = localStorage.getItem('token');
         this.headerToken = 'Bearer ' + this.token;
         this.utcOffset = -((new Date()).getTimezoneOffset());
@@ -125,6 +125,7 @@ export class ApiService {
     }
 
     postApi(url, data, authRequired, utcOffset) {
+        console.log(data,'ahsj jhajs ')
         return this.http.post(url, data, this.getToken(authRequired, utcOffset))
             .map((res: Response) => res.json())
 
